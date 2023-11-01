@@ -1,0 +1,458 @@
+:root {
+    --color-Uno: #f50987;
+    --color-Fondo: #01181f;
+    --color-dos: #ededed;
+    --color-tres: rgb(184, 0, 98);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-dos);
+    /*   animation: fondo 60s linear infinite;*/
+
+
+}
+
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Alinea el contenido en la parte superior */
+    height: 100vh;
+    /* Toma el 100% de la altura de la ventana */
+}
+
+
+
+
+
+.container-opciones__rifa {
+    background: radial-gradient(var(--color-Uno), var(--color-tres));
+    width: 600px;
+    height: 415px;
+
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.719);
+
+    /* Coloca el contenedor en posición absoluta */
+    /* Centrar vertical y horizontalmente */
+
+    width: 450px;
+    z-index: 9999999;
+
+}
+
+
+.area-formulario {
+    margin-bottom: 25px;
+}
+
+
+/*@keyframes fondo {
+    0% {
+        background-color: #ffcc00;
+    }
+
+    25% {
+        background-color: #ff66ff;
+    }
+
+    50% {
+        background-color: #66ffff;
+    }
+
+    75% {
+        background-color: #ff6666;
+    }
+
+    100% {
+        background-color: #ffcc00;
+    }
+}*/
+
+.contenido-container {
+    display: flex;
+    margin: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.contenido-container__titulo {
+    margin: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.lbl_texto {
+    flex: 3;
+    /* El label ocupará el 75% del espacio disponible (3 de 4 partes) */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente el contenido del label */
+    font-weight: bold;
+    width: 500px;
+
+}
+
+.titulo2 {
+    margin-bottom: 2px;
+}
+
+
+.txt_texto {
+    flex: 1;
+    /* El input ocupará el 25% del espacio disponible (1 de 4 partes) */
+    padding: 12px 0;
+    margin-left: 5%;
+    width: 10px;
+    border: 1px solid var(--color-Uno);
+    border-radius: 5px;
+    color: var(--color-tres);
+    padding-left: 4px;
+    font-size: 16px;
+
+    outline: none;
+    transition: all 0.2s;
+}
+
+/* Agrega estilos adicionales según sea necesario */
+
+.txt_texto:hover {
+    background: var(--color-dos);
+    transition: all 0.2s;
+    z-index: 999;
+}
+
+.txt_texto::placeholder {
+    color: var(--color-Uno);
+    font-size: 16px;
+    padding-left: 5px;
+
+}
+
+.contenido-titulo__txt {
+    width: 99%;
+    margin-left: 0;
+    padding-left: 4px;
+}
+
+
+/* Estilos para los botones */
+button {
+    background-color: var(--color-tres);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+button:hover {
+    background-color: var(--color-Uno);
+    color: white;
+}
+
+
+.btn-generar__ganadores {
+    background: var(--color-Uno);
+    color: white;
+    font-size: 20px;
+    border: solid 1px var(--color-dos);
+    width: 90%;
+    margin: 0;
+    margin-left: 5%;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-generar__ganadores:hover {
+    background: var(--color-tres);
+    border: solid 1px var(--color-Fondo);
+    color: var(--color-Fondo);
+    transition: all 0.2s;
+}
+
+/*
+.lbl_texto {
+    display: none;
+}*/
+
+.tittle-link {
+    display: flex;
+    /* Utiliza flexbox para alinear elementos en línea */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    justify-content: center;
+    /* Centra horizontalmente los elementos */
+}
+
+h1 {
+    font-size: 2.1em;
+    color: var(--color-Uno);
+    text-shadow: 1px 2px 2px black;
+
+}
+
+.logo-image {
+    width: 3em;
+    /* Define el ancho deseado para la imagen (puedes ajustar este valor) */
+    height: 3em;
+    /* Define la altura deseada para la imagen (puedes ajustar este valor) */
+    margin-right: 10px;
+    /* Agrega un margen a la izquierda para separar la imagen del texto */
+
+}
+
+
+.tittle-link__opcopnes {
+
+    text-align: center;
+    font-size: 1em;
+    color: var(--color-Fondo);
+    text-shadow: none;
+    border-bottom: 1px solid var(--color-dos);
+}
+
+.tittle-link__opcopnesh1 {
+    font-size: 1.5em;
+    color: var(--color-Fondo);
+    text-shadow: none;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los cuadros que muestran los números ganadores */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 0;
+    transition: all 0.3s;
+}
+
+li {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.450);
+    font-size: 6em;
+    z-index: 0;
+    /* Ajusta el tamaño de los cuadros */
+    width: 150px;
+    /* Ancho personalizado */
+    height: 120px;
+    /* Altura personalizada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Otros estilos personalizados, como colores de fondo y texto */
+    background-color: var(--color-Uno);
+    color: var(--color-Fondo);
+    /* Color del texto personalizado */
+    transition: all 0.3s;
+
+}
+
+.confeti {
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    pointer-events: none;
+    z-index: 33;
+}
+
+
+/* Estilos para el cuadro de diálogo del mensaje confirmar reiniciar */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-dos);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*mensaje recarga pagina*/
+
+.confirmation-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:var(--color-dos);
+    border: 1px solid var(--color-dos);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999999999;
+}
+
+.confirmation-dialog p {
+    margin: 0;
+    z-index: 9999999999;
+}
+
+.confirmation-dialog button {
+    margin: 10px;
+    padding: 5px 15px;
+    background-color:var(--color-Uno);
+    color: var(--color-dos);
+    border: none;
+    cursor: pointer;
+    z-index: 9999999999;
+}
+
+.confirmation-dialog button:hover {
+    background-color: var(--color-Uno);
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-Uno);
+    padding: 10px 20px;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.450);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2.1em;
+    text-shadow: none;
+    color: var(--color-Fondo);
+    left: 50px;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para los botones en la barra de navegación */
+.navbar-buttons button {
+    background-color: transparent;
+    color: var(--color-Fondo);
+
+    padding: 20px 15px;
+    border-radius: 0;
+    border-left: 2px solid var(--color-dos);
+    border-right: 2px solid var(--color-dos);
+    margin-bottom: -15px;
+    margin-top: -15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1em;
+
+}
+
+.navbar-buttons button:hover {
+    background-color: var(--color-Uno);
+    padding: 20px 20px;
+    border-radius: 10px;
+    color: var(--color-dos);
+    transition: all 0.3s;
+}
+
+
+.titulo-de_larifa {
+    text-align: center;
+}
+
+.logo-image1 {
+    width: 2.2em;
+    /* Define el ancho deseado para la imagen (puedes ajustar este valor) */
+    height: 2.2em;
+    /* Define la altura deseada para la imagen (puedes ajustar este valor) */
+    margin-right: 1em;
+}
+
+.el-logo__principal {
+    display: flex;
+}
+
+
+
+/*estilo para el contador*/
+#contador {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+    /* Aumentar el tamaño de la fuente */
+    color: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px;
+    border-radius: 50%;
+}
+
+
+#contador::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid transparent;
+
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+#contador span {
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#contador span.salir {
+    opacity: 0;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD</title>
+    <link rel="stylesheet" href="./styles.css">
+  <!-- <link rel="icon" href="logo.png" type="image/png"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div id="configuracion">
+
+            <div class="tittle-link">
+               <!-- <a href=""><img src="logo.png" alt="Logo" class="logo-image"></a>-->
+                <h1> LD | LUCKY DRAW</h1>
+            </div>
+
+            <div class="container-opciones__rifa">
+                <div class="tittle-link__opcopnes">
+
+                    <h1 class="tittle-link__opcopnesh1">Opciones</h1>
+                </div>
+
+                <form id="formulario" class="area-configuracion">
+                    <div class="area-formulario">
+                        <div class="contenido-container__titulo">
+                            <label for="titulo" class="lbl_texto titulo2">Título:</label>
+                            <input type="text" id="titulo" placeholder="" class="txt_texto contenido-titulo__txt"><br>
+                        </div>
+                        <div class="contenido-container">
+                            <label for="rango-max" class="lbl_texto">Rango mínimo:</label>
+                            <input type="number" id="rango-min" placeholder="" class="txt_texto"><br>
+                        </div>
+
+                        <div class="contenido-container">
+                            <label for="rango-max" class="lbl_texto">Rango máximo:</label>
+                            <input type="number" id="rango-max" placeholder="" class="txt_texto"><br>
+
+                        </div>
+
+                        <div class="contenido-container">
+                            <label for="cantidad-ganadores" class="lbl_texto">Cantidad de ganadores:</label>
+                            <input type="number" id="cantidad-ganadores" placeholder="" class="txt_texto"><br>
+
+                        </div>
+                        <div class="contenido-container">
+                            <label for="numeros-excluir" class="lbl_texto">Números a excluir:</label>
+                            <input type="text" id="numeros-excluir" placeholder="Ej: 10 25 30" class="txt_texto">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-generar__ganadores">Iniciar</button>
+                </form>
+            </div>
+        </div>
+        <div id="contador" style="display: none;"></div>
+
+        <div id="resultados" style="display: none;">
+            <div class="navbar">
+                <div class="el-logo__principal">
+                   <!-- <img src="logo.png" alt="" class="logo-image1">-->
+                    <h1> LD | LUCKY DRAW</h1>
+                </div>
+                <div class="navbar-buttons">
+                    <button id="reiniciar">Reiniciar</button>
+                    <button id="nueva-ronda">Nueva Ronda</button>
+                </div>
+            </div>
+            <h2 id="titulo-ronda" class="titulo-de_larifa"></h2>
+            <ul id="lista-ganadores">
+                <!-- Aquí se mostrarán los ganadores -->
+            </ul>
+
+        </div>
+        <div id="modal-confirmacion" class="modal">
+            <div class="modal-contenido">
+                <p>¿Estás seguro de que deseas reiniciar la rifa? Esto eliminará los resultados actuales.</p>
+                <button id="confirmar-reiniciar">Sí</button>
+                <button id="cancelar-reiniciar">No</button>
+            </div>
+        </div>
+        <div id="custom-confirmation" class="confirmation-dialog">
+            <p>Tienes datos no guardados. ¿Estás seguro de que deseas recargar la página?</p>
+            <button id="confirm-reload">Sí</button>
+            <button id="cancel-reload">No</button>
+        </div>
+    </div>
+    <script src="./contador.js"></script>
+    <script src="./script.js"></script>
+    <script>
+    jsConfetti= new JSConfetti()
+    </script>
+       <script src="./mensaje.js"></script>
+</body>
+
+</html>
